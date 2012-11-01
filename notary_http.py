@@ -86,7 +86,7 @@ class NotaryHTTPServer:
 
 		self.create_static_index()
 
-		self.web_port = self.DEFAULT_WEB_PORT
+		self.web_port = int(args.webport)
 		if(args.envport):
 			self.web_port = int(os.environ[self.ENV_PORT_KEY_NAME])
 
